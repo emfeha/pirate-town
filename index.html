@@ -10,12 +10,22 @@
             crossorigin="anonymous"></script>
     <script>
         $( document ).ready(function() {
-            var variants = ['normal', 'alt', 'hidden'];
+            var buildings = ['normal', 'alt'];
+            var bonuses = ['normal', 'alt', 'hidden'];
+            var flags = ['UK', 'US'];
 
             $('.randomize').on('click', function randomize() {
-                $('i.sprite').each(function(index, element) {
+                $('i.building').each(function(index, element) {
 
-                    $(element).removeClass('normal alt hidden').addClass(variants[Math.floor(Math.random() * variants.length)]);
+                    $(element).removeClass('normal alt').addClass(buildings[Math.floor(Math.random() * buildings.length)]);
+                });
+                $('i.bonus').each(function(index, element) {
+
+                    $(element).removeClass('normal alt hidden').addClass(bonuses[Math.floor(Math.random() * bonuses.length)]);
+                });
+                $('i.flag').each(function(index, element) {
+
+                    $(element).removeClass('UK US').addClass(flags[Math.floor(Math.random() * flags.length)]);
                 });
             })
         });
@@ -25,32 +35,33 @@
 <div class="sprite sprite-Stronghold">
     <h1>Barataria</h1>
     <button class="randomize">Randomize</button>
-    <i class="sprite sprite-m1">
-        <i class="sprite sprite-b1 hidden"></i>
+    <i class="sprite flag"></i>
+    <i class="sprite building sprite-m1">
+        <i class="sprite bonus sprite-b1 hidden"></i>
     </i>
-    <i class="sprite sprite-m2">
-        <i class="sprite sprite-b2 hidden"></i>
+    <i class="sprite building sprite-m2">
+        <i class="sprite bonus sprite-b2 hidden"></i>
     </i>
-    <i class="sprite sprite-m3">
-        <i class="sprite sprite-b3 hidden"></i>
+    <i class="sprite building sprite-m3">
+        <i class="sprite bonus sprite-b3 hidden"></i>
     </i>
-    <i class="sprite sprite-m4">
-        <i class="sprite sprite-b4 hidden"></i>
+    <i class="sprite building sprite-m4">
+        <i class="sprite bonus sprite-b4 hidden"></i>
     </i>
-    <i class="sprite sprite-m5">
-        <i class="sprite sprite-b5 hidden"></i>
+    <i class="sprite building sprite-m5">
+        <i class="sprite bonus sprite-b5 hidden"></i>
     </i>
-    <i class="sprite sprite-m6">
-        <i class="sprite sprite-b6 hidden"></i>
+    <i class="sprite building sprite-m6">
+        <i class="sprite bonus sprite-b6 hidden"></i>
     </i>
-    <i class="sprite sprite-m7">
-        <i class="sprite sprite-b7 hidden"></i>
+    <i class="sprite building sprite-m7">
+        <i class="sprite bonus sprite-b7 hidden"></i>
     </i>
-    <i class="sprite sprite-m8">
-        <i class="sprite sprite-b8 hidden"></i>
+    <i class="sprite building sprite-m8">
+        <i class="sprite bonus sprite-b8 hidden"></i>
     </i>
-    <i class="sprite sprite-m9">
-        <i class="sprite sprite-b9 hidden"></i>
+    <i class="sprite building sprite-m9">
+        <i class="sprite bonus sprite-b9 hidden"></i>
     </i>
 
 </div>
