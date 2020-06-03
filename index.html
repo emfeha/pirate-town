@@ -11,11 +11,13 @@
     <script src="https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script>
     <script>
         $( document ).ready(function() {
+            var names = ['Blum', 'Micro', 'Agro', 'Barataria','Deadwood'];
             var buildings = ['normal', 'alt'];
             var bonuses = ['normal', 'alt', 'hidden'];
             var flags = ['UK', 'US'];
 
             $('#randomize').on('click', function randomize() {
+                $('h1').text(names[Math.floor(Math.random() * names.length)]);
                 $('i.building').each(function(index, element) {
 
                     $(element).removeClass('normal alt').addClass(buildings[Math.floor(Math.random() * buildings.length)]);
