@@ -5,9 +5,6 @@ h1
   left: 80px
   font-size: 56px
 
-.preview
-  background: #ccc
-
 .button
   display: inline-block
   border-radius: 5px
@@ -29,242 +26,297 @@ h1
 .content
   display: flex
 
+.building-header
+  background: #0f6674
+  color: #fff
+  font-size: 20px
+  height: 40px
+  padding: 4px
+
 .sprite
   background-image: url('img/spritesheet.jpg')
   background-repeat: no-repeat
   display: block
   position: absolute
 
-  &.sprite-Stronghold
+  &.stronghold
     width: 847px
     height: 1009px
     background-position: 0 0
     position: relative
     transform: scale(.7)
 
-    i i.hidden
-      display: none
+    div
+      i
+        display: none
+      &.b1,
+      &.b2
+        i
+          display: block
 
-  &.sprite-m1
+
+  &.m1
     width: 220px
     height: 254px
-    background-position: -847px 0
+    background-position: -1068px 0
     left: 438px
     top: 542px
 
     &.alt
-      background-position: -1068px 0
+      background-position: -847px 0
 
-      .sprite-b1
+      .bonus
         left: 110px
-        top: 142px
+        top: 95px
 
-    .sprite-b1
+    &.b1,
+    &.b2
+      .bonus
+        background-position: -944px -254px
+
+    &.b1.b2
+      .bonus
+        background-position: -847px -254px
+
+    .bonus
       width: 97px
       height: 94px
       left: 110px
-      top: 95px
+      top: 142px
 
-      &.normal
-        background-position: -847px -254px
-
-      &.alt
-        background-position: -944px -254px
-
-  .sprite-m2
+  .m2
     width: 140px
     height: 254px
-    background-position: -1288px 0
+    background-position: -1428px 0
     left: 658px
     top: 542px
 
     &.alt
-      background-position: -1428px 0
+      background-position: -1288px 0
 
-    .sprite-b2
+    &.b1,
+    &.b2
+      .bonus
+        background-position: -1362px -254px
+
+    &.b1.b2
+      .bonus
+        background-position: -1289px -254px
+
+    .bonus
       width: 74px
       height: 163px
       top: 53px
       left: 31px
 
-      &.normal
-        background-position: -1289px -254px
-
-      &.alt
-        background-position: -1362px -254px
-
-  .sprite-m3
+  .m3
     width: 233px
     height: 342px
-    background-position: -1567px 0
+    background-position: -1800px 0
     left: 49px
     top: 582px
 
     &.alt
-      background-position: -1800px 0
+      background-position: -1567px 0
 
-    .sprite-b3
+    &.b1,
+    &.b2
+      .bonus
+        background-position: -1659px -342px
+
+    &.b1.b2
+      .bonus
+        background-position: -1567px -342px
+
+    .bonus
       width: 92px
       height: 140px
       top: 60px
       left: 50px
 
-      &.normal
-        background-position: -1567px -342px
-
-      &.alt
-        background-position: -1659px -342px
-
-  .sprite-m4
+  .m4
     width: 156px
     height: 248px
-    background-position: -847px -348px
+    background-position: -1003px -348px
     top: 582px
     left: 282px
 
     &.alt
-      background-position: -1003px -348px
+      background-position: -847px -348px
 
-    .sprite-b4
+    &.b1,
+    &.b2
+      .bonus
+        background-position: -934px -596px
+
+    &.b1.b2
+      .bonus
+        background-position: -847px -596px
+
+    .bonus
       width: 87px
       height: 130px
       top: 50px
       left: 63px
 
-      &.normal
-        background-position: -847px -596px
-
-      &.alt
-        background-position: -934px -596px
-
-  .sprite-m5
+  .m5
     width: 186px
     height: 267px
-    background-position: -1160px -417px
+    background-position: -1347px -417px
     top: 275px
     left: 438px
 
-    &.alt
-      background-position: -1347px -417px
+    &.b1,
+    &.b2
+      .bonus
+        background-position: -1327px -684px
+        left: 5px
+        top: 74px
 
-      .sprite-b5
+    &.b1.b2
+      .bonus
+        background-position: -1160px -684px
         left: 11px
 
-        &.alt
-          left: 6px
-
-    .sprite-b5
+    .bonus
       width: 166px
       height: 91px
       top: 40px
       left: 9px
 
-      &.normal
-        background-position: -1160px -684px
+    &.alt
+      background-position: -1160px -417px
 
-      &.alt
-        background-position: -1327px -684px
-        left: 4px
+      &.b1,
+      &.b2
+        .bonus
+          left: 4px
+
+      &.b1.b2
+        .bonus
+          left: 9px
+
+      .bonus
+        left: 11px
         top: 38px
 
-  .sprite-m6
+  .m6
     width: 134px
     height: 363px
-    background-position: -1537px -482px
+    background-position: -1678px -482px
     top: 219px
     left: 303px
 
     &.alt
-      background-position: -1678px -482px
+      background-position: -1537px -482px
 
-      .sprite-b6
-        top: 167px
-        left: 23px
+      .bonus
+        top: 65px
+        left: 26px
 
-    .sprite-b6
-      width: 84px
-      height: 116px
-      top: 65px
-      left: 26px
-
-      &.normal
-        background-position: -1534px -845px
-
-      &.alt
+    &.b1,
+    &.b2
+      .bonus
         background-position: -1617px -845px
 
-  .sprite-m7
+    &.b1.b2
+      .bonus
+        background-position: -1534px -845px
+
+    .bonus
+      width: 84px
+      height: 116px
+      top: 167px
+      left: 23px
+
+  .m7
     width: 119px
     height: 259px
-    background-position: -1814px -482px
+    background-position: -1934px -483px
     top: 323px
     left: 182px
 
     &.alt
-      background-position: -1934px -483px
+      background-position: -1814px -482px
 
-    .sprite-b7
-      width: 89px
-      height: 118px
-      top: 40px
-      left: 17px
+      .bonus
+        top: 40px
 
-      &.normal
+    &.b1.b2
+      .bonus
         background-position: -1814px -742px
 
-      &.alt
+    &.b1,
+    &.b2
+      .bonus
         background-position: -1903px -742px
 
-  .sprite-m8
+    .bonus
+      width: 89px
+      height: 118px
+      top: 74px
+      left: 17px
+
+  .m8
     width: 131px
     height: 322px
-    background-position: -847px -726px
+    background-position: -978px -726px
     left: 49px
     top: 275px
 
     &.alt
-      background-position: -978px -726px
+      background-position: -847px -726px
 
-    .sprite-b8
-      width: 109px
-      height: 78px
-      top: 14px
-      left: 10px
+      .bonus
+        top: 14px
 
-      &.normal
-        background-position: -847px -1048px
-
-      &.alt
+    &.b1,
+    &.b2
+      .bonus
         background-position: -957px -1048px
 
-  .sprite-m9
+    &.b1.b2
+      .bonus
+        background-position: -847px -1048px
+
+    .bonus
+      width: 109px
+      height: 78px
+      top: 59px
+      left: 10px
+
+  .m9
     width: 175px
     height: 267px
-    background-position: -1110px -776px
+    background-position: -1284px -776px
     left: 624px
     top: 275px
 
     &.alt
-      background-position: -1284px -776px
+      background-position: -1110px -776px
 
-      .sprite-b9
-        top: 18px
-        left: 7px
+      &.b1,
+      &.b2
+        .bonus
 
-        &.alt
-          left: 8px
+      .bonus
+        top: 10px
+        left: 6px
 
-    .sprite-b9
-      width: 158px
-      height: 81px
-      top: 10px
-      left: 7px
-
-      &.normal
+    &.b1.b2
+      .bonus
         background-position: -1110px -1043px
 
-      &.alt
+    &.b1,
+    &.b2
+      .bonus
         background-position: -1269px -1043px
+
+    .bonus
+      width: 158px
+      height: 81px
+      top: 65px
+      left: 8px
 
 .flag
   width: 117px

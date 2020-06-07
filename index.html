@@ -1,105 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Pirate Town</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link rel="stylesheet" href="styles.css">
-    <script
-            src="https://code.jquery.com/jquery-3.5.1.min.js"
-            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-            crossorigin="anonymous"></script>
-    <script src="https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script>
-    <script>
-        $( document ).ready(function() {
-            var names = ['Blum', 'Micro', 'Agro', 'Barataria','Deadwood'];
-            var buildings = ['normal', 'alt'];
-            var bonuses = ['normal', 'alt', 'hidden'];
-            var flags = ['UK', 'US'];
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-            $('#randomize').on('click', function randomize() {
-                $('h1').text(names[Math.floor(Math.random() * names.length)]);
-                $('i.building').each(function(index, element) {
-
-                    $(element).removeClass('normal alt').addClass(buildings[Math.floor(Math.random() * buildings.length)]);
-                });
-                $('i.bonus').each(function(index, element) {
-
-                    $(element).removeClass('normal alt hidden').addClass(bonuses[Math.floor(Math.random() * bonuses.length)]);
-                });
-                $('i.flag').each(function(index, element) {
-
-                    $(element).removeClass('UK US').addClass(flags[Math.floor(Math.random() * flags.length)]);
-                });
-            })
-
-
-            var element = $("#html-content-holder"); // global variable
-            var getCanvas; // global variable
-
-            $("#btn-Preview-Image").on('click', function () {
-                html2canvas(element, {
-                    onrendered: function (canvas) {
-                        $("#previewImage").html(canvas);
-                        getCanvas = canvas;
-                    }
-                });
-            });
-
-            $("#btn-Convert-Html2Image").on('click', function () {
-                var imgageData = getCanvas.toDataURL("image/png");
-                // Now browser starts downloading it instead of just showing it
-                var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
-                var name = $('h1').text();
-                $("#btn-Convert-Html2Image").attr("download", name+".png").attr("href", newData);
-            });
-
-        });
-    </script>
+    <title>Hello, world!</title>
 </head>
 <body>
-<div class="controls">
-    <button id="randomize" class="button">Randomize</button>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <button id="btn-Preview-Image" type="button" class="button">Preview</button>
-    <a id="btn-Convert-Html2Image" href="#" class="button">Download</a>
-</div>
-<div class="content">
-    <div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div id="html-content-holder" class="sprite stronghold">
+                <h1 contenteditable="true">Town Name</h1>
+                <i class="sprite flag"></i>
+                <div class="sprite building m1">
+                    <i class="sprite bonus"></i>
+                </div>
+                <div class="sprite building m2">
+                    <i class="sprite bonus b2 hidden"></i>
+                </div>
+                <div class="sprite building m3">
+                    <i class="sprite bonus b3 hidden"></i>
+                </div>
+                <div class="sprite building m4">
+                    <i class="sprite bonus b4 hidden"></i>
+                </div>
+                <div class="sprite building m5">
+                    <i class="sprite bonus b5 hidden"></i>
+                </div>
+                <div class="sprite building m6">
+                    <i class="sprite bonus b6 hidden"></i>
+                </div>
+                <div class="sprite building m7">
+                    <i class="sprite bonus b7 hidden"></i>
+                </div>
+                <div class="sprite building m8">
+                    <i class="sprite bonus b8 hidden"></i>
+                </div>
+                <div class="sprite building m9">
+                    <i class="sprite bonus b9 hidden"></i>
+                </div>
 
-        <div id="html-content-holder" class="sprite sprite-Stronghold">
-            <h1 contenteditable="true">Town Name</h1>
-            <i class="sprite flag"></i>
-            <i class="sprite building sprite-m1">
-                <i class="sprite bonus sprite-b1 hidden"></i>
-            </i>
-            <i class="sprite building sprite-m2">
-                <i class="sprite bonus sprite-b2 hidden"></i>
-            </i>
-            <i class="sprite building sprite-m3">
-                <i class="sprite bonus sprite-b3 hidden"></i>
-            </i>
-            <i class="sprite building sprite-m4">
-                <i class="sprite bonus sprite-b4 hidden"></i>
-            </i>
-            <i class="sprite building sprite-m5">
-                <i class="sprite bonus sprite-b5 hidden"></i>
-            </i>
-            <i class="sprite building sprite-m6">
-                <i class="sprite bonus sprite-b6 hidden"></i>
-            </i>
-            <i class="sprite building sprite-m7">
-                <i class="sprite bonus sprite-b7 hidden"></i>
-            </i>
-            <i class="sprite building sprite-m8">
-                <i class="sprite bonus sprite-b8 hidden"></i>
-            </i>
-            <i class="sprite building sprite-m9">
-                <i class="sprite bonus sprite-b9 hidden"></i>
-            </i>
-
+            </div>
+        </div>
+        <div class="col">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h5>Chapter 1 - Baratarian Hideout</h5>
+                    <div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m1" data-mission="m1" data-type="alt">
+                            <label class="custom-control-label" for="m1">Success</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m1b1" data-mission="m1" data-type="b1">
+                            <label class="custom-control-label" for="m1b1">Bonus 1</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m1b2" data-mission="m1" data-type="b2">
+                            <label class="custom-control-label" for="m1b2">Bonus 2</label>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <h5>Chapter 2 - Smuggling Routes</h5>
+                    <div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m2" data-mission="m2" data-type="alt">
+                            <label class="custom-control-label" for="m2">Success</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m2b1" data-mission="m2" data-type="b1">
+                            <label class="custom-control-label" for="m2b1">Bonus 1</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m2b2" data-mission="m2" data-type="b2">
+                            <label class="custom-control-label" for="m2b2">Bonus 2</label>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <h5>Chapter 3 - Golden Opportunity</h5>
+                    <div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m3" data-mission="m3" data-type="alt">
+                            <label class="custom-control-label" for="m3">Success</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m3b1" data-mission="m3" data-type="b1">
+                            <label class="custom-control-label" for="m3b1">Bonus 1</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m3b2" data-mission="m3" data-type="b2">
+                            <label class="custom-control-label" for="m3b2">Bonus 2</label>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <h5>Chapter 4 - Through the Blockade</h5>
+                    <div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m4" data-mission="m4" data-type="alt">
+                            <label class="custom-control-label" for="m4">Success</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m4b1" data-mission="m4" data-type="b1">
+                            <label class="custom-control-label" for="m4b1">Bonus 1</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m4b2" data-mission="m4" data-type="b2">
+                            <label class="custom-control-label" for="m4b2">Bonus 2</label>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <h5>Chapter 5 - Shaw’s Forces</h5>
+                    <div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m5" data-mission="m5" data-type="alt">
+                            <label class="custom-control-label" for="m5">Success</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m5b1" data-mission="m5" data-type="b1">
+                            <label class="custom-control-label" for="m5b1">Bonus 1</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m5b2" data-mission="m5" data-type="b2">
+                            <label class="custom-control-label" for="m5b2">Bonus 2</label>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <h5>Chapter 6 - British Espionage</h5>
+                    <div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m6" data-mission="m6" data-type="alt">
+                            <label class="custom-control-label" for="m6">Success</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m6b1" data-mission="m6" data-type="b1">
+                            <label class="custom-control-label" for="m6b1">Bonus 1</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m6b2" data-mission="m6" data-type="b2">
+                            <label class="custom-control-label" for="m6b2">Bonus 2</label>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <h5>Chapter 7 - Pierre’s Wrath</h5>
+                    <div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m7" data-mission="m7" data-type="alt">
+                            <label class="custom-control-label" for="m7">Success</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m7b1" data-mission="m7" data-type="b1">
+                            <label class="custom-control-label" for="m7b1">Bonus 1</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m7b2" data-mission="m7" data-type="b2">
+                            <label class="custom-control-label" for="m7b2">Bonus 2</label>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <h5>Chapter 8 - Britain Attacks</h5>
+                    <div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m8" data-mission="m8" data-type="alt">
+                            <label class="custom-control-label" for="m8">Success</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m8b1" data-mission="m8" data-type="b1">
+                            <label class="custom-control-label" for="m8b1">Bonus 1</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m8b2" data-mission="m8" data-type="b2">
+                            <label class="custom-control-label" for="m8b2">Bonus 2</label>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <h5>Chapter 9 - Lords of Barataria</h5>
+                    <div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m9" data-mission="m9" data-type="alt">
+                            <label class="custom-control-label" for="m9">Success</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m9b1" data-mission="m9" data-type="b1">
+                            <label class="custom-control-label" for="m9b1">Bonus 1</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="m9b2" data-mission="m9" data-type="b2">
+                            <label class="custom-control-label" for="m9b2">Bonus 2</label>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-    <div id="previewImage" class="preview"></div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+<script src="https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script>
+<script>
+    $(document).ready(function () {
+        var names = ['Blum', 'Micro', 'Agro', 'Barataria', 'Deadwood'];
+        var buildings = ['', 'alt'];
+        var bonuses = ['b1', 'b2', 'b1 b2', ''];
+        var flags = ['UK', 'US'];
+        var element = $("#html-content-holder"); // global variable
+        var getCanvas; // global variable
+
+        $('#randomize').on('click', function randomize() {
+            $('h1').text(names[Math.floor(Math.random() * names.length)]);
+            $('.building').each(function (index, element) {
+
+                $(element).removeClass('alt b1 b2').addClass(buildings[Math.floor(Math.random() * buildings.length)]).addClass(bonuses[Math.floor(Math.random() * bonuses.length)]);
+            });
+            $('i.flag').each(function (index, element) {
+
+                $(element).removeClass('UK US').addClass(flags[Math.floor(Math.random() * flags.length)]);
+            });
+            html2canvas(element, {
+                onrendered: function (canvas) {
+                    $("#previewImage").html(canvas);
+                    getCanvas = canvas;
+                }
+            });
+        })
+
+        $("#btn-Convert-Html2Image").on('click', function () {
+            var imgageData = getCanvas.toDataURL("image/png");
+            // Now browser starts downloading it instead of just showing it
+            var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
+            var name = $('h1').text();
+            $("#btn-Convert-Html2Image").attr("download", name + ".png").attr("href", newData);
+        });
+
+        $('input[type=checkbox]').on('click', function () {
+            var t = $(this),
+                mission = t.data('mission'),
+                type = t.data('type');
+
+            console.log(t, mission, type);
+            $('.' + mission).toggleClass(type);
+        })
+
+    });
+</script>
+<div class="controls">
+    <button id="randomize" class="button">Randomize</button>
+    <a id="btn-Convert-Html2Image" href="#" class="button">Download</a>
+</div>
+
 </body>
 </html>
