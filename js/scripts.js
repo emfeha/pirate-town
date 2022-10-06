@@ -1,16 +1,15 @@
 $(document).ready(function () {
     var names = ['Blum', 'Micro', 'Agro', 'Barataria', 'Deadwood'];
-    var buildings = ['normal', 'alt'];
-    var bonuses = ['b1', 'b2', 'b1 b2', ''];
+    var buildings = ['a', 'b'];
+    var bonuses = ['a', 'b', 'c', ''];
     var flags = ['UK', 'US'];
     var element = $("#html-content-holder"); // global variable
     var getCanvas; // global variable
 
     $('#randomize').on('click', function randomize() {
-        $('h1').text(names[Math.floor(Math.random() * names.length)]);
         $('.building').each(function (index, element) {
 
-            $(element).removeClass('alt b1 b2').addClass(buildings[Math.floor(Math.random() * buildings.length)]).addClass(bonuses[Math.floor(Math.random() * bonuses.length)]);
+            $(element).removeClass('a b c').addClass(bonuses[Math.floor(Math.random() * bonuses.length)]);
         });
         $('i.flag').each(function (index, element) {
 
@@ -54,12 +53,6 @@ $(document).ready(function () {
                 total += 5;
             } else {
                 total  += 3;
-            }
-        });
-
-        $('.checkbox-bonus').each(function(){
-            if($(this).prop('checked') === true) {
-                total += 1;
             }
         });
 

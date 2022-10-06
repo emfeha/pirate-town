@@ -14,229 +14,96 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Legacy Tales: Barataria</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <a class="navbar-brand" href="#">Wildtails: A Pirate Legacy</a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Share <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Download</a>
-            </li>
-        </ul>
-    </div>
 </nav>
 <div class="container-fluid">
     <div class="row">
         <div class="col col-8">
             <div id="html-content-holder" class="sprite stronghold">
-                <h1 contenteditable="true">Town Name</h1>
                 <div class="score"><strong>Score:</strong> <span>27 (Smuggler)</span></div>
                 <i class="sprite flag US"></i>
-                <div class="sprite building m1">
-                    <i class="sprite bonus"></i>
+                <div class="sprite building b1">
                 </div>
-                <div class="sprite building m2">
-                    <i class="sprite bonus b2 hidden"></i>
+                <div class="sprite building b2">
                 </div>
-                <div class="sprite building m3">
-                    <i class="sprite bonus b3 hidden"></i>
+                <div class="sprite building b3">
                 </div>
-                <div class="sprite building m4">
-                    <i class="sprite bonus b4 hidden"></i>
-                </div>
-                <div class="sprite building m5">
-                    <i class="sprite bonus b5 hidden"></i>
-                </div>
-                <div class="sprite building m6">
-                    <i class="sprite bonus b6 hidden"></i>
-                </div>
-                <div class="sprite building m7">
-                    <i class="sprite bonus b7 hidden"></i>
-                </div>
-                <div class="sprite building m8">
-                    <i class="sprite bonus b8 hidden"></i>
-                </div>
-                <div class="sprite building m9">
-                    <i class="sprite bonus b9 hidden"></i>
+                <div class="sprite building b4">
                 </div>
 
             </div>
         </div>
         <div class="col">
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <h5>Chapter 1 - Baratarian Hideout</h5>
-                    <div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-mission" id="m1" data-mission="m1" data-type="alt">
-                            <label class="custom-control-label" for="m1">Success</label>
+            <div class="scoring">
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input checkbox-mission" id="m1" data-mission="b1" data-type="a">
+                                <label class="custom-control-label" for="m1"></label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input checkbox-mission" id="m1b1" data-mission="b1" data-type="b">
+                                <label class="custom-control-label" for="m1b1">Bonus 1</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input checkbox-mission" id="m1b2" data-mission="b1" data-type="c">
+                                <label class="custom-control-label" for="m1b2">Bonus 2</label>
+                            </div>
                         </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m1b1" data-mission="m1" data-type="b1">
-                            <label class="custom-control-label" for="m1b1">Bonus 1</label>
+                    </li>
+                    <li class="list-group-item">
+                        <div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input checkbox-mission" id="m2" data-mission="b2" data-type="a">
+                                <label class="custom-control-label" for="m2"></label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input checkbox-mission" id="m2b1" data-mission="b2" data-type="b">
+                                <label class="custom-control-label" for="m2b1">Bonus 1</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input checkbox-mission" id="m2b2" data-mission="b2" data-type="c">
+                                <label class="custom-control-label" for="m2b2">Bonus 2</label>
+                            </div>
                         </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m1b2" data-mission="m1" data-type="b2">
-                            <label class="custom-control-label" for="m1b2">Bonus 2</label>
+                    </li>
+                    <li class="list-group-item">
+                        <div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input checkbox-mission" id="m3" data-mission="b3" data-type="a">
+                                <label class="custom-control-label" for="m3"></label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input checkbox-mission" id="m3b1" data-mission="b3" data-type="b">
+                                <label class="custom-control-label" for="m3b1">Bonus 1</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input checkbox-mission" id="m3b2" data-mission="b3" data-type="c">
+                                <label class="custom-control-label" for="m3b2">Bonus 2</label>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <h5>Chapter 2 - Smuggling Routes</h5>
-                    <div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-mission" id="m2" data-mission="m2" data-type="alt">
-                            <label class="custom-control-label" for="m2">Success</label>
+                    </li>
+                    <li class="list-group-item">
+                        <div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input checkbox-mission" id="m4" data-mission="b4" data-type="a">
+                                <label class="custom-control-label" for="m4"></label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input checkbox-mission" id="m4b1" data-mission="b4" data-type="b">
+                                <label class="custom-control-label" for="m4b1">Bonus 1</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input checkbox-mission" id="m4b2" data-mission="b4" data-type="c">
+                                <label class="custom-control-label" for="m4b2">Bonus 2</label>
+                            </div>
                         </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m2b1" data-mission="m2" data-type="b1">
-                            <label class="custom-control-label" for="m2b1">Bonus 1</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m2b2" data-mission="m2" data-type="b2">
-                            <label class="custom-control-label" for="m2b2">Bonus 2</label>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <h5>Chapter 3 - Golden Opportunity</h5>
-                    <div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-mission" id="m3" data-mission="m3" data-type="alt">
-                            <label class="custom-control-label" for="m3">Success</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m3b1" data-mission="m3" data-type="b1">
-                            <label class="custom-control-label" for="m3b1">Bonus 1</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m3b2" data-mission="m3" data-type="b2">
-                            <label class="custom-control-label" for="m3b2">Bonus 2</label>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <h5>Chapter 4 - Through the Blockade</h5>
-                    <div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-mission" id="m4" data-mission="m4" data-type="alt">
-                            <label class="custom-control-label" for="m4">Success</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m4b1" data-mission="m4" data-type="b1">
-                            <label class="custom-control-label" for="m4b1">Bonus 1</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m4b2" data-mission="m4" data-type="b2">
-                            <label class="custom-control-label" for="m4b2">Bonus 2</label>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <h5>Chapter 5 - Shaw’s Forces</h5>
-                    <div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-mission" id="m5" data-mission="m5" data-type="alt">
-                            <label class="custom-control-label" for="m5">Success</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m5b1" data-mission="m5" data-type="b1">
-                            <label class="custom-control-label" for="m5b1">Bonus 1</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m5b2" data-mission="m5" data-type="b2">
-                            <label class="custom-control-label" for="m5b2">Bonus 2</label>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <h5>Chapter 6 - British Espionage</h5>
-                    <div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-mission" id="m6" data-mission="m6" data-type="alt">
-                            <label class="custom-control-label" for="m6">Success</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m6b1" data-mission="m6" data-type="b1">
-                            <label class="custom-control-label" for="m6b1">Bonus 1</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m6b2" data-mission="m6" data-type="b2">
-                            <label class="custom-control-label" for="m6b2">Bonus 2</label>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <h5>Chapter 7 - Pierre’s Wrath</h5>
-                    <div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-mission" id="m7" data-mission="m7" data-type="alt">
-                            <label class="custom-control-label" for="m7">Success</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m7b1" data-mission="m7" data-type="b1">
-                            <label class="custom-control-label" for="m7b1">Bonus 1</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m7b2" data-mission="m7" data-type="b2">
-                            <label class="custom-control-label" for="m7b2">Bonus 2</label>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <h5>Chapter 8 - Britain Attacks</h5>
-                    <div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-mission" id="m8" data-mission="m8" data-type="alt">
-                            <label class="custom-control-label" for="m8">Success</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m8b1" data-mission="m8" data-type="b1">
-                            <label class="custom-control-label" for="m8b1">Bonus 1</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m8b2" data-mission="m8" data-type="b2">
-                            <label class="custom-control-label" for="m8b2">Bonus 2</label>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <h5>Chapter 9 - Lords of Barataria</h5>
-                    <div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-mission" id="m9" data-mission="m9" data-type="alt">
-                            <label class="custom-control-label" for="m9">Success</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m9b1" data-mission="m9" data-type="b1">
-                            <label class="custom-control-label" for="m9b1">Bonus 1</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" class="custom-control-input checkbox-bonus" id="m9b2" data-mission="m9" data-type="b2">
-                            <label class="custom-control-label" for="m9b2">Bonus 2</label>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <h5>Epilogue</h5>
-                    <div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" class="custom-control-input checkbox-flag" id="US" name="flag" checked data-type="US">
-                            <label class="custom-control-label" for="US">American</label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" class="custom-control-input checkbox-flag" id="UK" name="flag" data-type="UK">
-                            <label class="custom-control-label" for="UK">British</label>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
