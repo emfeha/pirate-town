@@ -1,161 +1,21 @@
-body {
-  background: #333 !important;
-  font-family: Georgia !important;
+.container-fluid .row {
+  padding-top: 80px;
+}
+.score {
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+  font-size: 2em;
+  color: #fff;
+  text-align: right;
+  z-index: 100;
 }
 
-.scoring {
-  background: url(../img/ltb-scoring.png) no-repeat;
-  height: 638px;
-  width: 380px;
-}
-
-.scoring ul {
+.col {
   padding-top: 100px;
 }
 
-.scoring ul li {
-  background: none;
+img {
+  left: 0;
+  top: 0;
 }
-
-.scoring label {
-  background: red;
-  width: 32px;
-  height: 32px;
-}
-
-.score {
-  position: absolute;
-  bottom: 80px;
-  right: 60px;
-  width: 300px;
-  font-size: 24px;
-  color: #fff;
-  text-align: right;
-}
-
-
-.button {
-  display: inline-block;
-  border-radius: 5px;
-  border: none;
-  font-family: Georgia;
-  height: 50px;
-  background: #000;
-  color: #fff;
-  font-weight: bold;
-  width: 200px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  line-height: 50px;
-}
-
-.controls {
-  margin-bottom: 10px;
-}
-
-.content {
-  display: flex;
-}
-
-.building-header {
-  background: #0f6674;
-  color: #fff;
-  font-size: 20px;
-  height: 40px;
-  padding: 4px;
-}
-
-.sprite {
-  background-image: url("../img/ltb.png");
-  background-repeat: no-repeat;
-  display: block;
-  position: absolute;
-}
-.sprite.stronghold {
-  width: 787px;
-  height: 889px;
-  background-position: 0 0;
-  position: relative;
-}
-.sprite.stronghold div i {
-  display: none;
-}
-.sprite.stronghold div.b1 i, .sprite.stronghold div.b2 i {
-  display: block;
-}
-.sprite.building {
-  width: 209px;
-  height: 209px;
-}
-.sprite.b1 {
-  background-position: -9999px -9999px;
-  left: 42px;
-  top: 628px;
-}
-.sprite.b1.a {
-  background-position: -872px -766px;
-}
-.sprite.b1.b {
-  background-position: -1085px -766px;
-}
-.sprite.b1.c {
-  background-position: -1297px -766px;
-}
-.sprite.b2 {
-  background-position: -9999px -9999px;
-  left: 97px;
-  top: 387px;
-}
-.sprite.b2.a {
-  background-position: -872px -553px;
-}
-.sprite.b2.b {
-  background-position: -1085px -553px;
-}
-.sprite.b2.c {
-  background-position: -1297px -553px;
-}
-.sprite.b3 {
-  background-position: -9999px -9999px;
-  left: 447px;
-  top: 539px;
-}
-.sprite.b3.a {
-  background-position: -872px -341px;
-}
-.sprite.b3.b {
-  background-position: -1085px -341px;
-}
-.sprite.b3.c {
-  background-position: -1297px -341px;
-}
-.sprite.b4 {
-  background-position: -9999px -9999px;
-  left: 374px;
-  top: 271px;
-}
-.sprite.b4.a {
-  background-position: -872px -128px;
-}
-.sprite.b4.b {
-  background-position: -1085px -128px;
-}
-.sprite.b4.c {
-  background-position: -1298px -128px;
-}
-
-.flag {
-  width: 117px;
-  height: 90px;
-  left: 180px;
-  top: 242px;
-}
-.flag.US {
-  background-position: -1752px -346px;
-}
-.flag.UK {
-  background-position: -1870px -346px;
-}
-
-/*# sourceMappingURL=styles.css.map */

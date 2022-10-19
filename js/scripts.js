@@ -1,21 +1,6 @@
 $(document).ready(function () {
-    var names = ['Blum', 'Micro', 'Agro', 'Barataria', 'Deadwood'];
-    var buildings = ['a', 'b'];
-    var bonuses = ['a', 'b', 'c', ''];
-    var flags = ['UK', 'US'];
     var element = $("#html-content-holder"); // global variable
     var getCanvas; // global variable
-
-    $('#randomize').on('click', function randomize() {
-        $('.building').each(function (index, element) {
-
-            $(element).removeClass('a b c').addClass(bonuses[Math.floor(Math.random() * bonuses.length)]);
-        });
-        $('i.flag').each(function (index, element) {
-
-            $(element).removeClass('UK US').addClass(flags[Math.floor(Math.random() * flags.length)]);
-        });
-    })
 
     $("#btn-Convert-Html2Image").on('click', function () {
         html2canvas(element, {
@@ -31,16 +16,10 @@ $(document).ready(function () {
         $("#btn-Convert-Html2Image").attr("download", name + ".png").attr("href", newData);
     });
 
+
     $('input[type=radio]').on('click', function () {
-        $('.flag').removeClass('UK US').addClass($(this).data('type'));
-    });
-
-    $('input[type=checkbox]').on('click', function () {
-        var t = $(this),
-            mission = t.data('mission'),
-            type = t.data('type');
-
-        $('.' + mission).toggleClass(type);
+        $('.'+$(this).attr('name')).addClass('d-none');
+        $('.'+$(this).attr('id')).removeClass('d-none');
         calcScore()
     });
 
@@ -48,21 +27,20 @@ $(document).ready(function () {
         let total = 0,
             rank = "Smuggler";
 
-        $('.checkbox-mission').each(function(){
+        $('input[type=radio]').each(function(){
             if($(this).prop('checked') === true) {
-                total += 5;
-            } else {
-                total  += 3;
+                console.log($(this).data('score'));
+                total += $(this).data('score');
             }
         });
 
-        if(total > 39)
+        if(total > 16)
             rank = 'Pirate';
 
-        if (total > 59)
+        if (total > 19)
             rank = 'Legend';
 
-        $('.score span').text(total + ' (' + rank + ')');
+        $('.score .value').text(total + ' (' + rank + ')');
     }
 
 
