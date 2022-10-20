@@ -2,21 +2,6 @@ $(document).ready(function () {
     var element = $("#html-content-holder"); // global variable
     var getCanvas; // global variable
 
-    $("#btn-Convert-Html2Image").on('click', function () {
-        html2canvas(element, {
-            onrendered: function (canvas) {
-                $("#previewImage").html(canvas);
-                getCanvas = canvas;
-            }
-        });
-        var imgageData = getCanvas.toDataURL("image/png");
-        // Now browser starts downloading it instead of just showing it
-        var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
-        var name = $('h1').text();
-        $("#btn-Convert-Html2Image").attr("download", name + ".png").attr("href", newData);
-    });
-
-
     $('input[type=radio]').on('click', function () {
         $('.'+$(this).attr('name')).addClass('d-none');
         $('.'+$(this).attr('id')).removeClass('d-none');
@@ -42,6 +27,16 @@ $(document).ready(function () {
 
         $('.score .value').text(total + ' (' + rank + ')');
     }
+
+    $('#download').on('click', function () {
+        html2canvas(document.querySelector("#canvas")).then(canvas => {
+            let image = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
+            let link = document.createElement('a');
+            link.download = "ratuga_bay.png";
+            link.href = image;
+            link.click();
+        });
+    });
 
 
 });

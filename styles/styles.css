@@ -1,21 +1,20 @@
-.container-fluid .row {
-  padding-top: 80px;
+body {
+  padding-top: 50px;
 }
 .score {
   position: absolute;
   bottom: 10%;
   left: 15%;
-  font-size: 2em;
   color: #fff;
-  text-align: right;
   z-index: 100;
-}
-
-.col {
-  padding-top: 100px;
 }
 
 img {
   left: 0;
   top: 0;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
 }
